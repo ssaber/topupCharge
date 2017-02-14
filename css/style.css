@@ -1,0 +1,26 @@
+#container{
+		text-align: center;
+	    border: solid lightblue;
+	    width: 30%;
+	    margin: 20px auto;
+	    padding: 5px;
+	}
+	#phoneNumber,#amount{
+		direction: ltr;
+	}
+	.form-horizontal .control-label{
+		direction: rtl;
+		text-align: right;
+		margin-right: 10px;
+	}
+	#availableTopup{
+		display: none;
+	    width: 30%;
+	    margin: auto;
+    	border: solid black;
+	}
+	#availableTopup table tr td,#availableTopup table tr th{
+		text-align: center;
+		direction: rtl;
+		cursor: pointer;
+	}
