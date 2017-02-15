@@ -28,16 +28,24 @@
 	{
 		$('#charge').click(function(e){
 			e.preventDefault();
-			var amount=$("#amount").val();
-			$.ajax({
-			url:"webservice/TopUpCharge.php",
-			type:"post",
-			data:{"action":"getAvailableTopup"},
-			success:function(response){
-				$("#availableTopup").html(response);
-				$("#availableTopup").css('display','block');
+			var phoneNumber=$("#phoneNumber").val();
+			if(phoneNumber.length<10)
+				{
+					alert("لطفا شماره تلفن را با دقت وارد نمایید");
+					$("#phoneNumber").val("");
 				}
-			})
+			else
+			{
+				$.ajax({
+				url:"webservice/TopUpCharge.php",
+				type:"post",
+				data:{"action":"getAvailableTopup","phoneNumber":phoneNumber},
+				success:function(response){
+					$("#availableTopup").html(response);
+					$("#availableTopup").css('display','block');
+					}
+				})
+			}
 		})
 	$('#availableTopup').on("click"," #tbl1 tr",function() {
 

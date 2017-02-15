@@ -9,6 +9,11 @@ abstract class TopupResult{
 	Const SUCCESSFUL="SUCCESSFUL";
 	Const UNSUCCESSFUL="UNSUCCESSFUL";
 }
+abstract class CellPhoneOperatorID{
+	Const Hamrahe_Avval=6;
+	Const Irancell=7;
+	Const Ritel=12;
+}
 class Topup
 {
 	var $id,$name,$price,$operatorId;
